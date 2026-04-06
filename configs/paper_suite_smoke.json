@@ -1,0 +1,132 @@
+{
+  "outdir": "outputs/paper_suite_smoke",
+  "runs": [
+    {
+      "amplitude_threshold": 0.2,
+      "benchmark_family": "FitzHugh\u2013Nagumo",
+      "eps_values": [
+        0.05,
+        0.08,
+        0.13,
+        0.2,
+        0.35,
+        0.5
+      ],
+      "experiment": "fhn_pipeline",
+      "run_name": "fhn_main",
+      "run_robustness": true,
+      "seed": 0,
+      "sim_config": {
+        "atol": 1e-09,
+        "dt": 0.05,
+        "method": "Radau",
+        "reset_time_after_transient": true,
+        "rtol": 1e-07,
+        "t_final": 60.0,
+        "transient": 40.0
+      },
+      "sweep_role": "main"
+    },
+    {
+      "I_values": [
+        0.4975,
+        0.5,
+        0.5025,
+        0.505
+      ],
+      "amplitude_threshold": 0.2,
+      "benchmark_family": "FitzHugh\u2013Nagumo",
+      "epsilon_fixed": 0.08,
+      "experiment": "fhn_nuisance_pipeline",
+      "run_name": "fhn_nuisance",
+      "seed": 0,
+      "sim_config": {
+        "atol": 1e-09,
+        "dt": 0.05,
+        "method": "Radau",
+        "reset_time_after_transient": true,
+        "rtol": 1e-07,
+        "t_final": 50.0,
+        "transient": 30.0
+      },
+      "sweep_role": "nuisance"
+    },
+    {
+      "A_values": [
+        0.2,
+        0.35,
+        0.5,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.025,
+        1.05,
+        1.075,
+        1.1,
+        1.15,
+        1.2,
+        1.25,
+        1.4,
+        1.6
+      ],
+      "benchmark_family": "Autonomous forced van der Pol",
+      "cluster_threshold": 4,
+      "experiment": "vdp_pipeline",
+      "mu_fixed": 8.0,
+      "norm_spread_threshold": 0.75,
+      "omega_fixed": 0.9,
+      "period_cv_threshold": 0.03,
+      "run_name": "vdp_main",
+      "run_robustness": true,
+      "seed": 0,
+      "sim_config": {
+        "atol": 1e-08,
+        "dt": 0.05,
+        "max_step": 0.05,
+        "method": "RK45",
+        "reset_time_after_transient": true,
+        "rtol": 1e-06,
+        "t_final": 160.0,
+        "transient": 80.0
+      },
+      "sweep_role": "main"
+    },
+    {
+      "A_fixed": 0.8,
+      "benchmark_family": "Autonomous forced van der Pol",
+      "cluster_threshold": 4,
+      "experiment": "vdp_nuisance_pipeline",
+      "mu_fixed": 8.0,
+      "norm_spread_threshold": 0.75,
+      "omega_values": [
+        0.86,
+        0.87,
+        0.88,
+        0.89,
+        0.9,
+        0.91,
+        0.92,
+        0.93,
+        0.94
+      ],
+      "period_cv_threshold": 0.03,
+      "run_name": "vdp_nuisance",
+      "seed": 0,
+      "sim_config": {
+        "atol": 1e-08,
+        "dt": 0.05,
+        "max_step": 0.05,
+        "method": "RK45",
+        "reset_time_after_transient": true,
+        "rtol": 1e-06,
+        "t_final": 160.0,
+        "transient": 80.0
+      },
+      "sweep_role": "nuisance"
+    }
+  ],
+  "study_name": "structural_regimes_paper_suite_smoke"
+}

@@ -1,0 +1,23 @@
+{
+  "release_name": "paper-freeze-v1",
+  "package_version": "1.0.0",
+  "supported_entrypoints": [
+    "regime-toolkit run-study configs/paper_suite.json",
+    "regime-toolkit run-study configs/paper_suite_smoke.json",
+    "regime-toolkit run-study configs/benchmark_suite.json"
+  ],
+  "required_outputs": [
+    "study_index.json",
+    "study_summary.csv",
+    "study_manifest.json",
+    "specificity_report.json",
+    "ablation_report.json",
+    "integrity_report.json",
+    "contract_report.json"
+  ],
+  "notes": [
+    "The primary paper claim is full-state / multivariate trajectory-only structural regime detection.",
+    "Scalar delay-embedding robustness is supplemental.",
+    "Use configs/ for the supported paper and benchmark suite entry points."
+  ]
+}
